@@ -27,6 +27,7 @@
     } else {
         echo "No activity recorded yet.";
     }
+    // Dashboard view finalized
 ?>
     </pre>
 </div>
