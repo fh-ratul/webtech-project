@@ -154,6 +154,7 @@ function searchUsers() {
         }
     };
     xhr.send();
+    // AJAX logic updated
 }
 window.onload = function() { searchUsers(); toggleStudentFields(); };
 </script>
