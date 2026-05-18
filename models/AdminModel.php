@@ -112,7 +112,7 @@ class AdminModel {
     }
     // Instr 5: Subject Taxonomy Logic
     public function getSubjects() {
-        return $this->db->query("SELECT * FROM subjects ORDER BY name ASC");
+        return $this->db->query("SELECT * FROM subjects ORDER BY id ASC");
     }
 
     public function addSubject($name, $desc) {
