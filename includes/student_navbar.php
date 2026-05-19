@@ -1,30 +1,30 @@
 <div class="navbar">
 
-    <a href="/student/dashboard">
+    <a href="dashboard.php">
         Dashboard
     </a>
 
-    <a href="/student/courses">
+    <a href="courses.php">
         Browse Courses
     </a>
 
-    <a href="/student/attempt-history">
+    <a href="attempt_history.php">
         Attempts
     </a>
 
-    <a href="/student/performance">
+    <a href="performance_dashboard.php">
         Performance
     </a>
 
-    <a href="/student/doubt-sessions">
+    <a href="my_doubt_sessions.php">
         Doubt Sessions
     </a>
 
-    <a href="/student/profile">
+    <a href="profile.php">
         Profile
     </a>
 
-    <a href="/auth/logout">
+    <a href="../auth/logout.php">
         Logout
     </a>
 
