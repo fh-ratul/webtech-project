@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap");
+
+:root{
+    --bg: #f2f5f9;
+    --bg-2: #e9eff7;
+    --ink: #0b1220;
+    --muted: #566174;
+    --surface: #ffffff;
+    --surface-2: #f6f8fb;
+    --border: #e1e6ef;
+    --accent: #2563eb;
+    --accent-2: #0f766e;
+    --danger: #b42318;
+    --success: #15803d;
+    --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Plus Jakarta Sans", "Segoe UI", Tahoma, sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(900px 520px at 90% -25%, #dfe9ff 0%, transparent 60%),
+        radial-gradient(700px 400px at -10% 20%, #f1f5ff 0%, transparent 60%),
+        repeating-linear-gradient(135deg, rgba(148, 163, 184, 0.08) 0, rgba(148, 163, 184, 0.08) 1px, transparent 1px, transparent 18px),
+        linear-gradient(180deg, var(--bg) 0%, #f7f9fc 100%);
+    min-height: 100vh;
+}
+
+h1, h2, h3{
+    font-family: "Sora", "Segoe UI", sans-serif;
+    letter-spacing: 0.1px;
+    margin-top: 0;
+}
+
+a{
+    color: inherit;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 14px 6vw;
+    background: rgba(10, 18, 30, 0.92);
+    color: #f8fafc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.22);
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(248, 250, 252, 0.1);
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover{
+    background: rgba(248, 250, 252, 0.22);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.35);
+    color: #ffffff;
+}
+
+.navbar a:focus-visible{
+    outline: 2px solid rgba(248, 250, 252, 0.6);
+    outline-offset: 2px;
+}
+
+.container{
+    width: min(1100px, 92%);
+    margin: 28px auto 60px;
+}
+
+.card{
+    background: var(--surface);
+    border: 1px solid rgba(225, 230, 239, 0.8);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 22px;
+    animation: rise 0.45s ease both;
+    position: relative;
+}
+
+.card:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.9), rgba(15, 118, 110, 0.7));
+    border-radius: 20px 20px 0 0;
+}
+
+.course-box,
+.answer-box{
+    background: var(--surface-2);
+    border: 1px solid rgba(225, 230, 239, 0.8);
+    border-radius: 16px;
+    padding: 18px;
+    margin-top: 16px;
+}
+
+input,
+textarea,
+select{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline: 2px solid rgba(37, 99, 235, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+button,
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 10px 24px rgba(31, 111, 235, 0.25);
+}
+
+button:hover,
+.btn:hover{
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn.secondary{
+    background: linear-gradient(135deg, #0f766e, #115e59);
+    box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+}
+
+.success{
+    color: var(--success);
+    background: rgba(21, 128, 61, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.error,
+.fail,
+.pending,
+.wrong{
+    color: var(--danger);
+    font-weight: 600;
+    background: rgba(180, 35, 24, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pass,
+.resolved,
+.endorsed,
+.correct{
+    color: var(--success);
+    font-weight: 600;
+    background: rgba(21, 128, 61, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.success:empty,
+.error:empty,
+.fail:empty,
+.pending:empty,
+.pass:empty,
+.resolved:empty,
+.endorsed:empty,
+.correct:empty,
+.wrong:empty{
+    display: none;
+}
+
+.score{
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.timer{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 600;
+    box-shadow: 0 10px 24px rgba(153, 27, 27, 0.18);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+table, th, td{
+    border: 1px solid var(--border);
+}
+
+th, td{
+    padding: 12px 10px;
+    text-align: center;
+}
+
+th{
+    background: #eef2f7;
+    font-weight: 700;
+}
+
+tr:nth-child(even) td{
+    background: #f8fafc;
+}
+
+.rank1{
+    background: #ffefb4;
+}
+
+.rank2{
+    background: #e8e8e8;
+}
+
+.rank3{
+    background: #f2d4b8;
+}
+
+img{
+    max-width: 100%;
+}
+
+.profile-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+}
+
+@keyframes rise{
+    from{
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 720px){
+    .navbar{
+        padding: 12px 4vw;
+        gap: 6px;
+    }
+
+    .container{
+        width: min(100%, 92%);
+        margin-top: 20px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+
+    th, td{
+        font-size: 13px;
+    }
+}
