@@ -1,0 +1,5 @@
+<?php
+?>
+<div class="navbar">
+    <a href="/">Home</a>
+</div>

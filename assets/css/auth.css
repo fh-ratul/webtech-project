@@ -1,0 +1,33 @@
+.auth-page .container{
+    width: min(420px, 90%);
+    margin-top: 80px;
+}
+
+.auth-page form{
+    display: grid;
+    gap: 12px;
+}
+
+.auth-page .card{
+    border-radius: 24px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow);
+}
+
+.auth-page h2{
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.auth-page button{
+    width: 100%;
+    margin-top: 16px;
+}
+
+.auth-page a{
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    text-decoration: none;
+}

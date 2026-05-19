@@ -1,0 +1,17 @@
+.quiz-page .container{
+    width: min(980px, 92%);
+}
+
+.quiz-page .card{
+    border-radius: 22px;
+}
+
+.quiz-page .timer{
+    box-shadow: 0 10px 24px rgba(153, 27, 27, 0.2);
+}
+
+.quiz-page h3{
+    font-family: "Plus Jakarta Sans", "Segoe UI", Tahoma, sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+}
